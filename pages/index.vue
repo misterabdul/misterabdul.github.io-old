@@ -1,6 +1,6 @@
 <template>
   <article>
-    <nuxt-content v-bind:document="homeTop" />
+    <nuxt-content :document="homeTop" />
   </article>
 </template>
 

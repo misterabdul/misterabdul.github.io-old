@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <div
-      v-bind:class="{ 'background-color-gray-900': isDarkMode }"
+      :class="{ 'background-color-gray-900': isDarkMode }"
       style="
         position: fixed;
         width: 100%;
@@ -16,7 +16,7 @@
     <div
       class="container"
       style="margin-top: 5px"
-      v-bind:class="{ 'has-text-light': isDarkMode }"
+      :class="{ 'has-text-light': isDarkMode }"
     >
       <Nuxt />
     </div>

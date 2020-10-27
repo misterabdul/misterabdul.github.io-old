@@ -4,7 +4,7 @@
       class="navbar is-fixed-top is-dark"
       role="navigation"
       aria-label="main navigation"
-      v-bind:class="{
+      :class="{
         'background-color-blue-900': isDarkMode,
         'background-color-teal-900': !isDarkMode,
       }"
@@ -19,7 +19,7 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
-          v-on:click="toggleMobile"
+          :click="toggleMobile"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -29,7 +29,7 @@
 
       <div
         class="navbar-menu"
-        v-bind:class="{ 'is-active': isActive }"
+        :class="{ 'is-active': isActive }"
         style="background-color: initial"
       >
         <div class="navbar-start">
@@ -37,7 +37,7 @@
           <a href="/portfolio" class="navbar-item has-text-light">
             Portfolio
           </a>
-          <a v-bind:href="blogUrl" class="navbar-item has-text-light"> Blog </a>
+          <a :href="blogUrl" class="navbar-item has-text-light"> Blog </a>
           <a href="/contact" class="navbar-item has-text-light"> Contact </a>
         </div>
 
@@ -46,10 +46,10 @@
             <div>
               <input
                 id="toggleDarkMode"
+                v-model="isDarkMode"
                 type="checkbox"
                 class="switch is-rounded is-info"
-                v-model="isDarkMode"
-                v-on:change="toggleDarkMode"
+                @change="toggleDarkMode"
               />
               <label class="has-text-light" for="toggleDarkMode"
                 ><font-awesome-icon :icon="['fas', 'moon']"
@@ -76,6 +76,9 @@ export default Vue.extend({
   beforeMount(): void {
     this.isDarkMode = this.$store.state.cssvars.isDarkMode
   },
+  created(): void {
+    this.blogUrl = process.env.blogUrl || '#'
+  },
   methods: {
     toggleMobile(): void {
       this.isActive = !this.isActive
@@ -85,15 +88,12 @@ export default Vue.extend({
       this.setCookie(this.isDarkMode)
     },
     async setCookie(val: Boolean): Promise<void> {
-      ;(this as any).$cookies.set('dark-mode', val, {
+      await (this as any).$cookies.set('dark-mode', val, {
         path: '/',
         maxAge: 60 * 60 * 24 * 7,
         httpOnly: false,
       })
     },
-  },
-  created(): void {
-    this.blogUrl = process.env.blogUrl || '#'
   },
 })
 </script>

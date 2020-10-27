@@ -1,7 +1,7 @@
 <template>
   <footer
     class="footer"
-    v-bind:class="{
+    :class="{
       'background-color-teal-50': !isDarkMode,
       'background-color-gray-800': isDarkMode,
       'has-text-light': isDarkMode,
@@ -10,22 +10,22 @@
   >
     <div class="content has-text-centered">
       <div class="is-size-3">
-        <a v-bind:href="'mailto:' + emailUrl">
+        <a :href="'mailto:' + emailUrl">
           <font-awesome-icon :icon="['fas', 'envelope']" />
         </a>
-        <a v-bind:href="githubUrl">
+        <a :href="githubUrl">
           <font-awesome-icon :icon="['fab', 'github']" />
         </a>
-        <a v-bind:href="linkedinUrl">
+        <a :href="linkedinUrl">
           <font-awesome-icon :icon="['fab', 'linkedin']" />
         </a>
-        <a v-bind:href="twitterUrl">
+        <a :href="twitterUrl">
           <font-awesome-icon :icon="['fab', 'twitter']" />
         </a>
-        <a v-bind:href="instagramUrl">
+        <a :href="instagramUrl">
           <font-awesome-icon :icon="['fab', 'instagram']" />
         </a>
-        <a v-bind:href="facebookUrl">
+        <a :href="facebookUrl">
           <font-awesome-icon :icon="['fab', 'facebook']" />
         </a>
       </div>
