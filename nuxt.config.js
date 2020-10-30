@@ -25,13 +25,20 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    htmlAttrs: {
+      style: 'min-height:100%',
+    },
     bodyAttrs: {
       class: 'has-navbar-fixed-top',
     },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/style/general.css', '~/assets/style/colors.css'],
+  css: [
+    '~/assets/style/general.css',
+    '~/assets/style/colors.css',
+    '~/assets/style/mobile.css',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],

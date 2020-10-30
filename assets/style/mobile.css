@@ -1,0 +1,25 @@
+@media only screen and (max-width: 600px) {
+  .nuxt-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .nuxt-content h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .nuxt-content h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .nuxt-content h4 {
+    font-size: 1.25rem !important;
+  }
+
+  .nuxt-content h5 {
+    font-size: 1rem !important;
+  }
+
+  .nuxt-content h6 {
+    font-size: 0.75rem !important;
+  }
+}
