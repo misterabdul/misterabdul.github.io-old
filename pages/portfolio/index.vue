@@ -14,5 +14,22 @@ export default Vue.extend({
       myPortfolio,
     }
   },
+  head() {
+    return {
+      title: 'Portfolio Abdul Pasaribu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Portfolio dari Abdul Rahmad Pasaribu',
+        },
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow',
+        },
+      ],
+    }
+  },
 })
 </script>

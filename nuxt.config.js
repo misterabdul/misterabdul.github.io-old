@@ -1,6 +1,7 @@
 export default {
   // The env property(https://nuxtjs.org/api/configuration-env/)
   env: {
+    webUrl: 'https://misterabdul.github.io',
     blogUrl: 'https://misterabdul.wordpress.com/',
     emailUrl: 'abdoelrachmad@gmail.com',
     githubUrl: 'https://github.com/misterabdul',
@@ -22,11 +23,121 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Web Abdul',
+      },
+      {
+        hid: 'robots',
+        name: 'robots',
+        content: 'index, follow',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'abdul,rahmad,pasaribu,abdulpasaribu',
+      },
+      {
+        hid: 'author',
+        name: 'author',
+        content: 'Abdul Rahmad Pasaribu, abdoelrachmad@gmail.com',
+      },
+      {
+        hid: 'language',
+        name: 'language',
+        content: 'ID',
+      },
+      {
+        hid: 'url',
+        name: 'url',
+        content: 'https://misterabdul.github.io',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Abdul Rahmad Pasaribu',
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://misterabdul.github.io/web_abdul.png',
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://misterabdul.github.io',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Abdul Rahmad Pasaribu',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Web Abdul',
+      },
+      {
+        hid: 'og:email',
+        name: 'og:email',
+        content: 'abdoelrachmad@gmail.com',
+      },
+      {
+        hid: 'og:locality',
+        name: 'og:locality',
+        content: 'Medan',
+      },
+      {
+        hid: 'og:region',
+        name: 'og:region',
+        content: 'ID',
+      },
+      {
+        hid: 'og:country-name',
+        name: 'og:country-name',
+        content: 'Indonesia',
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Abdul Rahmad Pasaribu',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://misterabdul.github.io/web_abdul.png',
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: 'Gambar Web Abdul',
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@abdulpasaribu',
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@abdulpasaribu',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     htmlAttrs: {
       style: 'min-height:100%',
+      lang: 'id',
     },
     bodyAttrs: {
       class: 'has-navbar-fixed-top',

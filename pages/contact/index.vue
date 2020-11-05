@@ -14,5 +14,22 @@ export default Vue.extend({
       contactMe,
     }
   },
+  head() {
+    return {
+      title: 'Kontak Abdul Pasaribu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Cara mengontak Abdul Rahmad Pasaribu',
+        },
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow',
+        },
+      ],
+    }
+  },
 })
 </script>

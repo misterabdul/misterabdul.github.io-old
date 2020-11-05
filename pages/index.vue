@@ -14,5 +14,22 @@ export default Vue.extend({
       homeTop,
     }
   },
+  head() {
+    return {
+      title: 'Abdul Pasaribu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Abdul Rahmad Pasaribu',
+        },
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow',
+        },
+      ],
+    }
+  },
 })
 </script>

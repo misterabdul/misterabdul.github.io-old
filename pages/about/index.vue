@@ -14,5 +14,22 @@ export default Vue.extend({
       aboutMe,
     }
   },
+  head() {
+    return {
+      title: 'Tentang Abdul Pasaribu',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Informasi sekilas tentang Abdul Rahmad Pasaribu',
+        },
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow',
+        },
+      ],
+    }
+  },
 })
 </script>
